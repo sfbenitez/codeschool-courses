@@ -49,7 +49,7 @@ complex condiitons
 var++ incrementing
 var-- decreasing
 
-Condiitonals
+Conditionals
 
 if(){
 }
@@ -59,3 +59,20 @@ else if (){
 }
 else {
 }
+
+Pop ups
+
+alert("");
+prompt("ask you something and take a value");
+confirm("boolean answer for prompt");
+
+ej:
+var userAge = prompt("What's your age, user?");
+var ageIsCorrect = false;
+
+while(ageIsCorrect==false){
+	if(confirm("Is this your age " + userAge + "?")){
+	alert("Yeah!");
+	ageIsCorrect=true;}
+}
+
