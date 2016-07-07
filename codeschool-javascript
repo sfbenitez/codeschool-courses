@@ -118,3 +118,38 @@ var modifiedNames = [ "Thomas Meeks",
                       "Dan McGaw" ];
 
 modifiedNames.map(function(arrayCell){alert("Yo, " + arrayCell[0]);});
+
+//llamadas a funciones dentro de funciones
+
+function adventureSelector(userChoice) {
+  // return anonymous functions inside conditional blocks
+  if (userChoice==1){
+    return function(userChoice){alert("You selected the Vines of Doom!");};}
+  else if (userChoice==2){
+    return function(userChoice){alert("Looks like you want the Lake of Despair!");};}
+	else {
+    return function(userChoice){alert("The Caves of Catastrophe!");};}
+
+}
+
+adventureSelector(3)();//Doble parentesis para invocar la función, sin los dobles parentesis muestra la sintásis de la función
+
+//using shift method on function´s array for call each one function
+
+var puzzlers = [
+  function(a) { return 8 * a - 10; },
+  function(a) { return (a - 3) * (a - 3) * (a - 3); },
+  function(a) { return a * a + 4; },
+  function(a) { return a % 5; }
+];
+var start = 2;
+
+// build applyAndEmpty function expression here
+var applyAndEmpty = function(input, queue){
+  var long=queue.length;
+  for(var i = 0;i < long;){
+    input = queue.shift()(input);
+    long--;
+  }
+	return input;};
+alert(applyAndEmpty(start, puzzlers));
