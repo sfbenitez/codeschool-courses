@@ -1,0 +1,332 @@
+HTML 5
+Doctype
+<!DOCTYPE html>
+
+Meta tag for charset
+<meta charset="UTF-8">
+
+Script tag for javascript files
+<script src="file.js"></script>
+
+Link tag for css stylesheet
+<link href="style.css" rel="stylesheet">
+
+I tag for voz alternativa/estado animico/pensamiento.
+<p><i>This is the finest piece of art I have ever seen</i>, Mrs. Plaza thought.</p>
+
+B tag for texto fuera de contexto...stylistically offset
+<p><b class="lead">The Art Gallery will be opening to an invitation-only group of art enthusiasts across the country.</b></p>
+
+EM tag para remarcar, hacer énfasis en un texto
+<p>The Art Gallery will be opening to an <em>invitation-only</em> group of art enthusiasts.</p>
+
+STRONG tag para remarcar texto importante por ejemplo fechas.
+
+
+Configuración de la pagina en html 5, cada una de las siguientes etiquetas en html las marcariamos como "DIV", bloques de contenido.
+
+SECTION tag, es como un div, pero todo el contenido del bloque debe estar relacionado.
+html 4
+<div class="section">
+html 5
+<section>
+  <h2>Blog</h2>
+  <p>This is the Art Gallery blog.</p>
+  <!-- ... -->
+</section>
+
+HEADER TAG, etiqueta para cabeceras, tanto de la página principal como de las diferentes secciones de la página, se puede repetir.
+<header>
+  <h1>Art Gallery Blog</h1>
+  <p>Covering all the Art Galleries across the globe</p>
+</header>
+
+FOOTER TAG, tag para el pie de página, tanto de la página principal como de las secciones, se puede repetir.
+<footer>
+  <p>&copy; Art Gallery 2013</p>
+</footer>
+
+ASIDE TAG, etiqueta para información secundaria pero relacionada con el contenido principal. Se puede repetir en las secciones.
+<aside>
+  <h3>About</h3>
+  <p>Camry Plaza is an award-winning blogger and writer that covers and reviews art galleries across the world.</p>
+</aside>
+
+NAV tag, etiqueta para menus/navegación de la web, se puede repetir
+<nav>
+  <ul>
+    <li><a class="active" href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+ARTICLE tag, etiqueta para syndicate content, contenido que se va a repetir simultaneamenet, artículos, entradas de blog.
+<article>
+  <header>
+    <h2><a href="/blog/opening-date-announced">Opening Date Announced</a></h2>
+    <p><em>Published on</em>: September 16, 2013</p>
+  </header>
+
+  <p><b class="article-lead">The Art Gallery will be opening to an <em>invitation-only</em> group of art enthusiasts across the country on <strong>December 1, 2013</strong>.</b></p>
+  <p>The opening of the Art Gallery will coincide with the release of several of Armando Blontio's finest art pieces, including, "Crème de la Crème," which has a mounting anticipation for its debut.</p>
+  <p>As a frequently misrespresented artist, Armando Blontio has struggled to uphold his image amidst the criticism. "I hope to dispel the illusion of my self-centeredness, as seen by my critics, with the Art Gallery opening," said Mr. Blontio.</p>
+</article>
+
+MAIN tag, bloque para el contenido principal de la página, debería de haber solo una etiqueta MAIN
+<main>
+  <article class="post">
+    <header>
+      <h2><a href="/blog/opening-date-announced">Opening Date Announced</a></h2>
+      <p><em>Published on</em>: September 16, 2013</p>
+    </header>
+
+    <p><b class="article-lead">The Art Gallery will be opening to an <em>invitation-only</em> group of art enthusiasts across the country on <strong>December 1, 2013</strong>.</b></p>
+    <p>The opening of the Art Gallery will coincide with the release of several of Armando Blontio's finest art pieces, including, "Crème de la Crème," which has a mounting anticipation for its debut.</p>
+    <p>As a frequently misrespresented artist, Armando Blontio has struggled to uphold his image amidst the criticism. "I hope to dispel the illusion of my self-centeredness, as seen by my critics, with the Art Gallery opening," said Mr. Blontio.</p>
+  </article>
+</main>
+
+FIGURE tag, para marcar imagenes con contenido propio.
+<figure>
+  <img src="armando-blontio.jpg" alt="A Famous Armando Blontio Painting" width="640" height="470" />
+</figure>
+
+FIGCAPTION, para añadir a la imagen una pequeña anotación.
+<figure>
+  <img src="armando-blontio.jpg" alt="A Famous Armando Blontio Painting" width="640" height="470" />
+  <figcaption>"Crème de la Crème," a famous Armando Blontio painting.</figcaption>
+</figure>
+
+TIME TAG, para fechas/horas.
+<header>
+  <h2><a href="/blog/opening-date-announced">Opening Date Announced</a></h2>
+  <p><em>Published on</em>: <time>September 16, 2013</time></p>
+</header>
+
+DATETIME atribute for TIME tag, asigna el valor de la fecha, da igual lo que este entre las etiquetas time.
+<header>
+  <h2><a href="/blog/opening-date-announced">Opening Date Announced</a></h2>
+  <p><em>Published on</em>: <time datetime="2013-09-16">September 16, 2013</time></p>
+</header>
+
+
+Formularios HTML 5.
+
+Nuevos tipos de input
+
+Tipo busqueda.
+<input type="search" />
+
+tipo email
+<input type="email" />
+
+datalist, como el select y sus options debe tener un campo tipo text, con el atributo list
+
+<input type="text" list="categories"/>
+<!-- Add your datalist here -->
+<datalist id="categories">
+  <option value="reviews">
+  <option value="profiles">
+  <option value="announcements">
+  </datalist>
+
+placeholder, como el value pero sin tener que borrar el texto.
+
+<input type="search" placeholder="Search..." />
+
+AUTOFOCUS, despues de cargar la página, el campo estará selccionado para escribir.
+
+<input type="search" placeholder="Search..." autofocus />
+
+REQUIRED, no se puede enviar el formulario si el campo REQUIRED esta en blanco, MUY ÚTIL
+
+<input type="email" placeholder="Enter your email..." required/>
+
+PATTERN, indica un patrón para el campo de texto.
+
+<input type="tel" pattern="[0-9]{10}"/>
+
+
+
+CSS3
+
+BORDER-RADIUS, redondea las esquinas de un bloque.
+
+.post {
+	border-top-left-radius: 4px;
+ 	border-top-right-radius: 4px;
+ 	border-bottom-right-radius: 4px;
+ 	border-bottom-left-radius: 4px;
+}
+
+.post {
+  border-radius: 4px 4px 0px 0px;
+}
+
+crear circulo con border-radius
+
+.author-img {
+	border-radius: 50%;
+}
+
+SOMBRAS, box-shadow
+.post {
+	box-shadow: 0px 1px 1px #000;
+}
+
+SOMBRAS TIPO inset
+
+.btn {
+	box-shadow: inset 0px 1px 0px #ce6a67;
+}
+
+DOBLE sombreado a un objeto
+h3 {
+	box-shadow: 0 1px 0 #969c8a,
+    0 2px 0 #fff;
+}
+
+BOX-SIZING
+
+incluye el padding al valor del width y el height
+.box {
+  box-sizing: padding-box;
+  border: 5px solid #000;
+  height: 200px;
+  margin: 20px;
+  padding: 15px;
+  width: 425px;
+}
+
+incluye el valor del borde y el padding al input, sirve en este caso para que no se salga de donde este el input al usar borde y padding
+.input {
+  box-sizing: border-box;
+  border: 1px solid grey;
+  padding: 7px 10px;
+  width: 100%;
+}
+
+FONDOS Y DOBLES FONDOS
+
+.element {
+	background-image:url(painting-01.jpg), url(painting-02.jpg);
+  background-position: top left, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.element {
+  background: url(painting-01.jpg) top left no-repeat, url(painting-02.jpg) center no-repeat;
+}
+
+RGBa fuction
+
+.tagline {
+	color: rgba(f,f,f, 0.65);
+}
+
+hsla function
+.tagline {
+  color: hsla(0, 0%, 100%, 0.65);
+}
+
+opacidad
+
+.element {
+	opacity: 0.45;
+}
+
+DEGRADADOS
+
+.nav {
+	background: linear-gradient(#3e606f, #324d59); 
+}
+
+.nav {
+  background: linear-gradient(0deg, #3e606f, #324d59);
+}
+
+DEGRADADOS RADIALES
+
+.masthead {
+	background: radial-gradient(#1e3e4d, #102028);
+}
+
+.masthead {
+  background: radial-gradient(circle, 400px, #1e3e4d, #102028);
+}
+
+FUENTES
+Para usar un archivo de fuentes que tengamos en local usamos @font-face
+
+@font-face {
+	font-family: "DroidSerifRegular";
+  	src: url("DroidSerifBold.eot");
+ 	font-weight: bold;
+  	font-style: normal;
+}
+
+body {
+	font-family: 'DroidSerifRegular', Georgia, 'Times New Roman', serif;
+}
+
+TRANSFORM
+TRANSLATE, mover bloques.
+
+img {
+	transform: translate(20px, 40px);
+}
+
+ROTATE, rotar bloques
+img {
+	transform: rotate(15deg);
+}
+
+SCALE, modificar la escala del bloque
+img {
+	transform: scale(1.5);
+}
+
+SKEW X/Y, dobla el bloque
+img {
+	transform: skewX(45deg);
+}
+
+img {
+	transform: skewY(-15deg);
+}
+
+TRANSITION
+a {
+  color: #c44743;
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+ 
+}
+
+a:hover {
+  color: #d56d68;
+}
+
+shortland property
+.element {
+  background-color: #c44743;
+  transition: background-color 0.6s linear 0.1s;
+}
+
+.element:hover {
+  background-color: #d56d68;
+}
+
+Hacer que la transición afecte a todas las propeiedades
+.element {
+  color: #c44743;
+  transition: ALL 0.2s ease-in-out 0s;
+}
+
+.element:hover {
+  background-color: rgba(196, 71, 67, 0.10);
+  color: #d56d68;
+}
